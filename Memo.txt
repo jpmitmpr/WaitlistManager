@@ -1,0 +1,25 @@
+Design Memo: Waitlist Manager
+
+This program uses a singly linked list to manage a dynamic waitlist. The
+`LinkedList` class is composed of nodes, each represented by the `Node`
+class. Every node stores a customer’s name and a pointer to the next
+node in the sequence. The linked list starts at the `head`, which
+represents the first person on the waitlist.
+
+The `head` plays a critical role because it is the entry point into the
+list. Operations like adding to the front simply update the head to a
+new node, while adding to the end requires traversing the list until the
+last node is found. Removal involves carefully updating pointers so that
+the chain of nodes remains intact.
+
+While Python provides built-in list structures, engineers sometimes need
+a custom linked list for specific scenarios. For example, in systems
+where insertion and deletion performance is more important than random
+access, linked lists can be a better choice. A real engineer might use a
+linked list for managing queues in a restaurant, handling memory
+allocation in operating systems, or modeling train cars that can be
+added or removed efficiently.
+
+This project demonstrates how linked lists provide fine-grained control
+over data organization and are especially useful in cases where dynamic
+insertion and deletion are frequent.
